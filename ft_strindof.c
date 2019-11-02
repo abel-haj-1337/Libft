@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 12:32:39 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/23 12:36:56 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:26:27 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_strindof(const char *s, char c)
 {
-	unsigned long	i;
-	int				not_found;
+	size_t	i;
+	int		not_found;
 
 	i = 0;
 	not_found = -1;

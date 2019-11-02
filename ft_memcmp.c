@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 22:22:13 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 03:19:12 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:27:55 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*f_string;
 	unsigned char	*s_string;
 

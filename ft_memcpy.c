@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:48:10 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/23 15:59:30 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:27:43 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*f_string;
 	char			*s_string;
 

@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:40:53 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/23 15:55:36 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:28:11 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned long	i;
+	size_t			i;
 	char			*f_string;
 	char			*s_string;
 

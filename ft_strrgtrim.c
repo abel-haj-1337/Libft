@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 19:13:58 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 08:35:12 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:23:35 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 char	*ft_strrgtrim(char const *s1, char const *set)
 {
-	unsigned long	j;
-	unsigned long	str_len;
-	char			*new_string;
+	size_t	j;
+	size_t	str_len;
+	char	*new_string;
 
 	if (!s1)
 		return (NULL);

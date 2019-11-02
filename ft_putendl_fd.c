@@ -15,7 +15,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned long	i;
+	size_t	i;
 
 	if (s)
 	{

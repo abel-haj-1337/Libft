@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:36:56 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 03:15:41 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:15:27 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	char			*string;
+	size_t	i;
+	char	*string;
 
 	i = 0;
 	string = (char *)s;

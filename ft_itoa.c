@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 23:20:52 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/23 16:41:23 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:29:19 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static	size_t	ft_intlen(int n)
 {
-	unsigned long i;
+	size_t i;
 
 	i = 0;
 	if (n == 0)
@@ -28,7 +28,7 @@ static	size_t	ft_intlen(int n)
 	return (i);
 }
 
-static	char	*ft_itostr(char *dst, unsigned int n, size_t start, size_t len)
+static	char	*ft_itostr(char *dst, size_t n, size_t start, size_t len)
 {
 	dst[len - 1] = '\0';
 	len--;
@@ -43,11 +43,11 @@ static	char	*ft_itostr(char *dst, unsigned int n, size_t start, size_t len)
 
 char			*ft_itoa(int n)
 {
-	char				*string_integer;
-	int					sign;
-	unsigned int		result;
-	unsigned long		i;
-	unsigned long		j;
+	char		*string_integer;
+	int			sign;
+	size_t		result;
+	size_t		i;
+	size_t		j;
 
 	sign = 0;
 	j = 0;
@@ -55,7 +55,7 @@ char			*ft_itoa(int n)
 	if (n < 0)
 	{
 		sign = 1;
-		result = -((unsigned int)n);
+		result = -((size_t)n);
 	}
 	else
 		result = n;

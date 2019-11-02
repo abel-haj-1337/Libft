@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:27:41 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 03:20:25 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:28:23 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*str;
 
 	i = 0;

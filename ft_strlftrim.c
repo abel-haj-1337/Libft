@@ -14,8 +14,8 @@
 
 char	*ft_strlftrim(char const *s1, char const *set)
 {
-	unsigned long	i;
-	unsigned long	j;
+	size_t	i;
+	size_t	j;
 
 	if (!s1)
 		return (NULL);

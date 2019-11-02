@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 02:24:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 08:27:11 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:30:14 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned long	i;
+	size_t			i;
 	unsigned char	*string;
 
 	if (s)

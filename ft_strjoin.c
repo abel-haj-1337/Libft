@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 18:47:37 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 08:08:32 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:25:58 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	unsigned int	len_s1;
-	unsigned int	len_s2;
-	char			*new_string;
+	size_t	i;
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*new_string;
 
 	if (!s1 || !s2)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 19:39:00 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 01:42:36 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:14:40 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned long	i;
-	unsigned long	len;
-	char			*f_string;
-	char			*s_string;
+	size_t	i;
+	size_t	len;
+	char	*f_string;
+	char	*s_string;
 
 	i = 0;
 	f_string = (char *)dst;

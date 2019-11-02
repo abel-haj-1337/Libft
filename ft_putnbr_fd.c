@@ -15,13 +15,13 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int result;
+	size_t result;
 
 	result = 0;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		result = -((unsigned int)n);
+		result = -((size_t)n);
 	}
 	else
 		result = n;

@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 17:55:20 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 17:26:10 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:30:35 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	unsigned int	i;
-	char			*string;
+	size_t	i;
+	char	*string;
 
 	i = 0;
 	string = (char *)dst;

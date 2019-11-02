@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 00:19:53 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 00:29:35 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:29:49 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int		ft_strcountch(const char *s, size_t n)
 {
-	unsigned long	i;
-	int				c;
+	size_t	i;
+	int		c;
 
 	i = 0;
 	c = 0;

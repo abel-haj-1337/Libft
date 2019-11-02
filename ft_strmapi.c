@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:20:56 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 08:07:09 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/01 23:33:52 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned long	i;
-	char			*string;
+	size_t	i;
+	char	*string;
 
 	if (!s)
 		return (NULL);
