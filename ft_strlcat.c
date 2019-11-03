@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 15:10:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 23:15:02 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/03 21:38:05 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -21,8 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	unsigned char	*f_string;
 
 	j = 0;
-	i = ft_strlen(dst);
 	k = ft_strlen(src);
+	i = ft_strlen(dst);
 	if (!size)
 		return (k);
 	f_string = (unsigned char *)dst;
