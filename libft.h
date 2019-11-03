@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 00:09:02 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 00:21:15 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/03 16:49:45 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_itoa(int n);
 int					ft_isalpha(int c);
+int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isprint(int c);
