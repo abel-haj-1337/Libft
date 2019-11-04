@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:36:56 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 23:15:27 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/04 23:31:11 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 void	ft_bzero(void *s, size_t n)
 {

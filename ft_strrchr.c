@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:19:00 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 17:28:58 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:07:02 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

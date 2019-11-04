@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 02:24:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 23:30:14 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:03:24 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr_fd(char *s, int fd)
 		string = (unsigned char *)s;
 		while (string[i])
 		{
-			write(fd, &string[i], 1);
+			ft_putchar_fd(string[i], fd);
 			i++;
 		}
 	}

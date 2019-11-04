@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:43:39 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/25 08:27:35 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:02:58 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-
 	if (s)
 	{
-		i = 0;
-		while (s[i])
-		{
-			write(fd, &s[i], 1);
-			i++;
-		}
+		ft_putstr_fd(s, fd);
 		write(fd, "\n", 1);
 	}
 }

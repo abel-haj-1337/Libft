@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 13:55:23 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 16:50:30 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:02:07 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static void		ft_split_incr(const char *s, size_t *i, char c, int equal_to)
 {

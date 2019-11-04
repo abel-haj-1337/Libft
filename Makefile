@@ -6,7 +6,7 @@
 #    By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 21:45:29 by abel-haj          #+#    #+#              #
-#    Updated: 2019/11/04 01:05:56 by abel-haj         ###   ########.fr        #
+#    Updated: 2019/11/04 23:27:23 by abel-haj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,11 +26,13 @@ all: $(NAME) bonus
 
 $(NAME):
 	gcc $(CFLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ) && ranlib $(NAME)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 bonus:
 	gcc $(CFLAGS) -c $(BNS_SRC)
-	ar rc $(NAME) $(BNS_OBJ) && ranlib $(NAME)
+	ar rc $(NAME) $(BNS_OBJ)
+	ranlib $(NAME)
 
 clean:
 	rm -f *.o

@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 23:20:52 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 23:29:19 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/04 23:30:49 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static	size_t	ft_intlen(int n)
 {

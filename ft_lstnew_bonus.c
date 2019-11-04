@@ -6,11 +6,10 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 15:50:13 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/21 18:53:31 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/04 23:34:27 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

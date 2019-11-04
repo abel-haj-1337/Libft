@@ -6,13 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 19:13:58 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/01 23:23:35 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:05:57 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_strrgtrim(char const *s1, char const *set)
 {

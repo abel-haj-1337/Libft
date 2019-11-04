@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 00:09:02 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/03 16:49:45 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:02:40 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <stdlib.h>
 # include <stddef.h>
-# include <ctype.h>
-# include <fcntl.h>
+# include <unistd.h>
 
 typedef	struct		s_list
 {

@@ -6,13 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 16:57:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/10/18 17:28:00 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 00:04:28 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_strdup(const char *s1)
 {

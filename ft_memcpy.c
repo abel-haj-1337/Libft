@@ -6,12 +6,11 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:48:10 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/03 20:07:00 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/04 23:56:14 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
