@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 22:08:36 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/03 16:51:26 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/05 20:28:11 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (*alst == NULL)
-		*alst = new;
-	else
+	if (new)
 	{
-		while (*alst)
-		{
-			(*alst)->next = *alst;
-		}
 		new->next = *alst;
+		*alst = new;
 	}
 }

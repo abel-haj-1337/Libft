@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/12 15:10:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/05 17:40:28 by abel-haj         ###   ########.fr       */
+/*   Created: 2019/11/05 20:38:47 by abel-haj          #+#    #+#             */
+/*   Updated: 2019/11/05 22:24:30 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void		ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t			i;
-	size_t			j;
-	size_t			k;
-	unsigned char	*f_string;
-
-	j = 0;
-	k = ft_strlen(src);
-	if (!size)
-		return (k);
-	i = ft_strlen(dst);
-	f_string = (unsigned char *)dst;
-	while (src[j] && size > i + 1)
-	{
-		f_string[i] = src[j];
-		i++;
-		j++;
-	}
-	if (size > i)
-		f_string[i] = '\0';
-	if (size > ft_strlen(dst))
-		return (i + k - j);
-	return (size + k);
+	if (*alst)
+		(*alst)->next = new;
+	else
+		*alst = new;
 }

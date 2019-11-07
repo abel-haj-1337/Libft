@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/12 15:10:42 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/05 17:40:28 by abel-haj         ###   ########.fr       */
+/*   Created: 2019/11/05 20:29:38 by abel-haj          #+#    #+#             */
+/*   Updated: 2019/11/05 20:33:28 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int			ft_lstsize(t_list *lst)
 {
-	size_t			i;
-	size_t			j;
-	size_t			k;
-	unsigned char	*f_string;
+	int	i;
 
-	j = 0;
-	k = ft_strlen(src);
-	if (!size)
-		return (k);
-	i = ft_strlen(dst);
-	f_string = (unsigned char *)dst;
-	while (src[j] && size > i + 1)
+	i = 0;
+	while (lst)
 	{
-		f_string[i] = src[j];
+		lst = lst->next;
 		i++;
-		j++;
 	}
-	if (size > i)
-		f_string[i] = '\0';
-	if (size > ft_strlen(dst))
-		return (i + k - j);
-	return (size + k);
+	return (i);
 }

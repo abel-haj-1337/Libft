@@ -1,164 +1,105 @@
-//#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-//#include <stddef.h>
-//#include <stdint.h>
-//#include <ctype.h>
-//#include <stdlib.h>
-//#include <fcntl.h>
-//#include <limits.h>
+#include <stdlib.h>
 #include "libft.h"
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
-int		main()
+void	ft_print_result(t_list *elem)
 {
-//	printf("strrchr\n%s\n", strrchr("party", 'o'));
-//	printf("%s\n\n", ft_strrchr("party", 'o'));
+	int	len;
 
-	printf("strnstr\n%s", ft_strnstr("haystack", "stacking", 6));
-	printf("::");
-	printf("%s\n", strnstr("haystack", "stacking", 6));
-//	printf("%s\n", ft_strnstr("haystack", NULL, 0));	// should SEGFAULT
-    char *sstrn = "lorem ipsum dolor sit amet";
-	printf("%s\n", ft_strnstr(sstrn, "dolor", 15));
-	printf("%s\n\n", strnstr(sstrn, "dolor", 15));
+	len = 0;
+	while (((char *)elem->content)[len])
+		len++;
+	write(1, elem->content, len);
+}
 
-	char n[40] = "-99999999999999999999999999";
-//	printf("atoi\n%d\n", ft_atoi("  \t -68d4fs"));
-//	printf("%d\n", atoi("  \t -68d4fs"));
-	printf("atoi\n%d\n", ft_atoi(n));
-	printf("%d\n\n", atoi(n));
+void	ft_del(void *content)
+{
+	free(content);
+}
 
-//	printf("isalpha\n%d\n", ft_isalpha('O'));
-//	printf("%d\n\n", isalpha('O'));
+t_list	*ft_lstnewone(void const *content)
+{
+	t_list	  *elem;
 
-//	printf("isdigit\n%d\n", ft_isdigit(52));
-//	printf("%d\n\n", isdigit(52));
-
-//	printf("isalnum\n%d\n", ft_isalnum(48));
-//	printf("%d\n\n", isalnum(70));
-
-//	printf("isprint\n%d\n", ft_isprint('\r'));
-//	printf("%d\n\n", isprint('\r'));
-
-//	printf("tolower\n%c\n", ft_tolower('O'));
-//	printf("%c\n\n", tolower('O'));
-
-//	printf("strchr\n%s\n", ft_strchr("string", '\0'));
-//	printf("%s\n\n", strchr("string", '\0'));
-
-//	printf("strlen\n%lu\n", ft_strlen("\0str\0ing"));
-//	printf("%lu\n\n", strlen("\0str\0ing"));
-	
-//	char *src1 = malloc(20);
-//	char *src2 = malloc(20);
-//	printf("memset\n%s\n", ft_memset(src1 - 1, 'o', 5));
-//	printf("%s\n\n", memset(src2 - 1, 'o', 5));
-
-//	char fstring[10] = "lilies";
-//	char sstring[10] = "lilies";
-//	char rep[10] = "lilies";
-//	printf("memcpy\n%s\n", ft_memcpy(rep, rep, sizeof(rep)));
-//	printf("%s\n\n", memcpy(rep, rep, sizeof(rep)));
-
-//	char fstring[10] = "lilies";
-//	char sstring[10] = "lilies";
-//	char rep[10] = "jasmin";
- //	printf("memccpy\n%s || %s\n", ft_memccpy(fstring, rep, 'i', sizeof(rep)), fstring);
-//	printf("%s || %s\n\n", memccpy(sstring, rep, 'i', sizeof(rep)), sstring); 
-
-//	char *s = "Tulipe";
-//	printf(strrchr"%s\n", ft_strrchr(s, 0));
-//	printf("%s\n\n", strrchr(s, 0));
-
-//	printf("strncmp\n%d\n", ft_strncmp(" string first", "\0\n\200", 8/*sizeof("")*/));
-//	printf("%d\n\n", ft_strncmp(" string first", "\0\n\200", 8/*sizeof("")*/));
-
-//	int i = 0;
-//	printf("<@><@><@><@><@><@><@><@>\n");
-//	while (i < 9)
-//	{
-//		printf("size is %d\n", i);
-		char strls1[7] = "string\0";
-		char strls2[7] = "string\0";
-		int a = strlcpy(strls1, "char", 3);
-		int b = ft_strlcpy(strls2, "char", 3);
-	//	int a = strlcat(strls1, "cha\0", /*i*/3);
-	//	int b = ft_strlcat(strls2, "cha\0", /*i*/3);
-		printf("strlcpy\n%s : %d\n", strls1, a);
-		printf("%s : %d\n\n", strls2, b);
-//		i++;
-//	}
-
-//	char *res_sys = (char *)calloc(0, 5);
-//	char *res_fun = (char *)ft_calloc(0, 5);
-//	printf("sys : %s, fun : %s\n", res_sys, res_fun);
-//	printf("len of sys : %d, len of fun %d\n\n", (int)ft_strlen(res_sys), (int)ft_strlen(res_fun));
-	
-//	char fstring[7] = "string";
-//	char sstring[7] = "string";
-//	printf("strdup\n%s\n", strdup(string));
-//	printf("%s\n\n", ft_strdup(string));
-////strcpy(fstring, "char");printf("strcpy\n%s\n", fstring);
-////ft_strcpy(sstring, "char");printf("%s\n\n", sstring);
-
-//	printf("substr\n%s\n\n", ft_substr("string", 0, 0));
-
-//	printf("strjoin\n%s\n", ft_strjoin("\0str\0", "\0ing\0"));
-
-	printf("strlftrim\n%s\n", ft_strlftrim("string", "stg\0roetgi"));
-	printf("strrgtrim\n%s\n", ft_strrgtrim("string", "stg"));
-	printf("strtrim\n%s\n", ft_strtrim("string", "stg"));
-	printf("%s\n\n", ft_strtrim("string", " "));
-
-/*	////////
-	printf("split\n%s\n", ft_split("istringig", 'i')[0]);
-	printf("%s\n", ft_split("istringig", 'i')[1]);
-	printf("%s\n", ft_split("istringig", 'i')[2]);
-	printf("%s\n\n", ft_split("istringig", 'i')[3]);
-*/	////////
-//	printf("%s\n", ft_split("      ", ' ')[0]);
-
-//	char tab[20] = "string";
-//	char (*ptr)(unsigned int, char);
-//	ptr = &ft_touppermpi;
-//	printf("%s\n", tab);
-//	printf("%s\n", ft_strmapi(tab, ptr));
-
-	int fd;
-	fd = open("new_file", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	ft_putchar_fd('c', fd);ft_putchar_fd('|', fd);
-	ft_putstr_fd("string", fd);
-	ft_putendl_fd("", fd);
-	ft_putendl_fd("new line", fd);
-	ft_putnbr_fd(-2147483648, fd);ft_putendl_fd("\n", fd);
-
-	printf("itoa\n%s\n", ft_itoa(-59840));
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n\n", ft_itoa(-2147483648LL));
-
-//	char s1[10] = "string";
-//	char s2[10] = "string";
-//	printf("memmove\n%s\n", memmove(s1 + 1, s1, 3));
-//	printf("%s\n\n", ft_memmove(s2 + 1, s2, 3));
-
-	char	str[] = "lorem ipsum dolor sit amet";
-	char	*strsub;
-	char	*bullshit;
-	if (!(strsub = ft_substr(str, 400, 20)))
-		printf("NULL\n");
+	elem = (t_list *)malloc(sizeof(t_list));
+	if (!elem)
+		return (NULL);
+	if (!content)
+	{
+		elem->content = NULL;
+	}
 	else
 	{
-		bullshit = (char *)&strsub[30];
-		bullshit = "FULL BULLSHIT";
-		if (strsub)
-			printf("string %s", strsub);
-		else
-			printf("rip\n");
+		if (!(elem->content = malloc(sizeof(*(elem->content)) * sizeof(content))))
+		{
+			free(elem);
+			return (NULL);
+		}
+		elem->content = memcpy(elem->content, content, sizeof(content));
 	}
-	if (str == strsub)
-		printf("A new string was not returned\n");
-	else
-		printf("does not match\n");
+	elem->next = NULL;
+	return (elem);
+}
 
+void	ft_lst_print_before(t_list *lst)
+{
+
+	lst->next = lst;
+	lst = lst->next;
+	ft_print_result(lst);
+	write(1, "\n", 1);
+}
+
+int main(int argc, const char *argv[])
+{
+	t_list	  *elem;
+	t_list	  *elem2;
+	t_list	  *elem3;
+	t_list	  *elem4;
+	char	str [] = "lorem";
+	char	str2 [] = "ipsum";
+	char	str3 [] = "dolor";
+	char	str4 [] = "sit";
+
+	elem = ft_lstnewone(str);
+	elem2 = ft_lstnewone(str2);
+	elem3 = ft_lstnewone(str3);
+	elem4 = ft_lstnewone(str4);
+	alarm(5);
+	if (argc == 1 || !elem || !elem2 || !elem3 || !elem4)
+		return (0);
+	elem->next = elem2;
+	elem2->next = elem3;
+	elem3->next = elem4;
+	if (atoi(argv[1]) == 1)
+	{
+		ft_lstdelone(elem3, &ft_del);
+		if (elem)
+			ft_print_result(elem);
+		else
+			write(1, "NULL", 4);
+		write(1, "\n", 1);
+		if (elem2)
+			ft_print_result(elem2);
+		else
+			write(1, "NULL", 4);
+		write(1, "\n", 1);
+		if (elem3)
+			ft_print_result(elem3);
+		else
+			write(1, "NULL", 4);
+		write(1, "\n", 1);
+		if (elem4)
+			ft_print_result(elem4);
+		else
+			write(1, "NULL", 4);
+	}
+	else if (atoi(argv[1]) == 2)
+	{
+		ft_print_result(elem3);
+		ft_lst_print_before(elem3);
+	}
 	return (0);
 }
