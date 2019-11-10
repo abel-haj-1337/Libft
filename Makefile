@@ -6,7 +6,7 @@
 #    By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 21:45:29 by abel-haj          #+#    #+#              #
-#    Updated: 2019/11/06 09:37:24 by abel-haj         ###   ########.fr        #
+#    Updated: 2019/11/08 22:23:02 by abel-haj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,20 +25,20 @@ BNS_OBJ = $(BNS_SRC:.c=.o)
 all: $(NAME) bonus
 
 $(NAME):
-	gcc $(CFLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc $(CFLAGS) -c $(SRC) && echo "Compiled object files"
+	@ar rc $(NAME) $(OBJ) && echo "Created/updated library"
+	@ranlib $(NAME) && echo "Indexed library"
 
 bonus:
-	gcc $(CFLAGS) -c $(BNS_SRC)
-	ar rc $(NAME) $(BNS_OBJ)
-	ranlib $(NAME)
+	@gcc $(CFLAGS) -c $(BNS_SRC) && echo "Compiled bonus object files"
+	@ar rc $(NAME) $(BNS_OBJ) && echo "Created/updated library with bonus"
+	@ranlib $(NAME) && echo "Indexed library with bonus"
 
 clean:
-	rm -f *.o
+	@rm -rf *.o && echo "Removed object files"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -rf $(NAME) && echo "Removed $(NAME)"
 
 re: fclean all
 
