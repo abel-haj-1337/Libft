@@ -6,7 +6,7 @@
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 19:39:00 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/05 00:05:23 by abel-haj         ###   ########.fr       */
+/*   Updated: 2019/11/11 00:53:09 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	char	*s_string;
 
 	i = 0;
+	if (!dst || !src)
+		return (0);
+	len = ft_strlen(src);
 	f_string = (char *)dst;
 	s_string = (char *)src;
-	len = ft_strlen(src);
 	while (s_string[i] && size > i + 1)
 	{
 		f_string[i] = s_string[i];

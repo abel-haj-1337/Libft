@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 07:38:22 by abel-haj          #+#    #+#             */
-/*   Updated: 2019/11/08 22:24:44 by abel-haj         ###   ########.fr       */
+/*   Created: 2019/11/12 21:17:11 by abel-haj          #+#    #+#             */
+/*   Updated: 2019/11/12 21:25:12 by abel-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,11 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list **head;
-	t_list *nlst;
-
-	head = &nlst;
-	if (!lst || !f || !del)
-		return (NULL);
-	while (lst)
+	if (lst)
 	{
-		nlst = ft_lstnew(f(lst->content));
-		if (!nlst)
-		{
-			ft_lstclear(head, del);
-			return (NULL);
-		}
-		lst = lst->next;
-		nlst = nlst->next;
+		if (0)
+			del(lst->content);
+		lst->content = f(lst->content);
 	}
-	return (*head);
+	return (lst);
 }
