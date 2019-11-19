@@ -17,6 +17,7 @@ void	ft_lstprint(t_list *list)
 	while (list)
 	{
 		ft_putstr(list->content);
+		ft_putchar('\n');
 		list = list->next;
 	}
 }

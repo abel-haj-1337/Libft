@@ -21,10 +21,12 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	f_string = (unsigned char *)s1;
 	s_string = (unsigned char *)s2;
-	while (n > i && ft_strlen(s1) >= i && ft_strlen(s2) >= i)
+	while (n > i)
 	{
 		if (f_string[i] != s_string[i])
 			return (f_string[i] - s_string[i]);
+		else if (f_string[i] == '\0')
+			return (0);
 		i++;
 	}
 	return (0);

@@ -18,6 +18,8 @@ char	*ft_strcpy(char *dst, const char *src)
 	char	*string;
 
 	i = 0;
+	if (!dst || !src)
+		return (dst);
 	string = (char *)dst;
 	while (src[i])
 	{

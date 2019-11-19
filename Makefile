@@ -6,7 +6,7 @@
 #    By: abel-haj <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 21:45:29 by abel-haj          #+#    #+#              #
-#    Updated: 2019/11/08 22:23:02 by abel-haj         ###   ########.fr        #
+#    Updated: 2019/11/17 21:26:17 by abel-haj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,20 +25,20 @@ BNS_OBJ = $(BNS_SRC:.c=.o)
 all: $(NAME) bonus
 
 $(NAME):
-	@gcc $(CFLAGS) -c $(SRC) && echo "Compiled object files"
-	@ar rc $(NAME) $(OBJ) && echo "Created/updated library"
-	@ranlib $(NAME) && echo "Indexed library"
+	@gcc $(CFLAGS) -c $(SRC) && echo "\033[1;33mCompiled object files"
+	@ar rc $(NAME) $(OBJ) && echo "\033[0;32mCreated/updated library"
+	@ranlib $(NAME) && echo "\033[1;33mIndexed library"
 
 bonus:
-	@gcc $(CFLAGS) -c $(BNS_SRC) && echo "Compiled bonus object files"
-	@ar rc $(NAME) $(BNS_OBJ) && echo "Created/updated library with bonus"
-	@ranlib $(NAME) && echo "Indexed library with bonus"
+	@gcc $(CFLAGS) -c $(BNS_SRC) && echo "\033[1;33mCompiled bonus object files"
+	@ar rc $(NAME) $(BNS_OBJ) && echo "\033[0;32mCreated/updated library with bonus"
+	@ranlib $(NAME) && echo "\033[1;33mIndexed library with bonus"
 
 clean:
-	@rm -rf *.o && echo "Removed object files"
+	@rm -rf *.o && echo "\033[1;31mRemoved object files"
 
 fclean: clean
-	@rm -rf $(NAME) && echo "Removed $(NAME)"
+	@rm -rf $(NAME) && echo "\033[1;31mRemoved $(NAME)"
 
 re: fclean all
 
