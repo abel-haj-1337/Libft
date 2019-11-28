@@ -15,15 +15,13 @@
 int		ft_strindof(const char *s, char c)
 {
 	size_t	i;
-	int		not_found;
 
 	i = 0;
-	not_found = -1;
 	while (s[i])
 	{
 		if (s[i] == c)
 			return (i);
 		i++;
 	}
-	return (not_found);
+	return (-1);
 }
