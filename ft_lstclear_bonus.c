@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void		ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;
-	t_list *l;
+	t_list	*tmp;
+	t_list	*l;
 
 	if (lst && del)
 	{
@@ -31,7 +31,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 }
 
-void		ft_d(void *data)
+void	ft_d(void *data)
 {
 	if (data)
 		data = NULL;

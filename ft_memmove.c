@@ -24,16 +24,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst == src)
 		return (dst);
 	else if (dst > src)
+	{
 		while (len > 0)
 		{
 			f_string[len - 1] = s_string[len - 1];
 			len--;
 		}
+	}
 	else if (src != NULL)
+	{
 		while (i < len)
 		{
 			f_string[i] = s_string[i];
 			i++;
 		}
-	return (void *)(f_string);
+	}
+	return ((void *)(f_string));
 }

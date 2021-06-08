@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_strindof(const char *s, char c)
+int	ft_strindof(const char *s, char c)
 {
 	size_t	i;
 
