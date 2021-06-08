@@ -36,23 +36,3 @@ void		ft_d(void *data)
 	if (data)
 		data = NULL;
 }
-
-int			main(void)
-{
-	t_list *l1;
-	t_list *l2;
-	t_list *l3;
-	t_list *l4;
-
-	l1 = ft_lstnew("lorem");
-	l2 = ft_lstnew("ipsum");
-	l3 = ft_lstnew("sit");
-	l4 = ft_lstnew("amet");
-	ft_lstadd_back(&l1, l2);
-	ft_lstadd_back(&l1, l3);
-	ft_lstadd_back(&l1, l4);
-	ft_lstprint(l1);
-	ft_lstclear(&l2, &ft_d);
-	ft_lstprint(l1);
-	return (0);
-}
